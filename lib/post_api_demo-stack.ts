@@ -80,6 +80,9 @@ export class PostApiDemoStack extends cdk.Stack {
     post.addMethod('PUT', postIntegration, {
       apiKeyRequired: true,
     });
+    post.addMethod('PATCH', postIntegration, {
+      apiKeyRequired: true,
+    });
 
     new CfnOutput(this, 'API Key ID', {
       value: apiKey.keyId,

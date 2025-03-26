@@ -29,13 +29,13 @@ export async function update(postId: string, body: string | null) {
 
         return {
             statusCode: 200,
-            body: JSON.stringify({ message: "Post updated successfully" }),
+            body: JSON.stringify({ message: "Post replaced successfully" }),
         };
     } catch (error) {
-        console.error("Error updating post:", error);
+        console.error("Error replacing post:", error);
         return {
             statusCode: 500,
-            body: JSON.stringify({ message: "Error updating post" }),
+            body: JSON.stringify({ message: "Error replacing post" }),
         };
     }
 }
